@@ -1,6 +1,5 @@
 import { json } from '@remix-run/node';
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
-import '../index.css'
 
 // type definitions
 type Book = {
@@ -42,6 +41,8 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4", backgroundColor: "#08080a", color: "#fff", height: "100vh" }}>
       <h1>Welcome to Remix {data ? data.name : 'Stranger'}</h1>
+      <h3>Go to /books/addbook to see all books and add new books</h3>
+
       <ul>
         {books.map(({ title, genre }, i) => {
           return (
